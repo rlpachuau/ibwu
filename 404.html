@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | India Baptist Women's Union</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #003366; /* Deep blue matching IBWU branding */
+            --accent-gold: #d4af37;
+            --text-gray: #555;
+            --light-bg: #f9f9f9;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-blue);
+        }
+
+        .error-code {
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            line-height: 1;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .motto {
+            font-style: italic;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #004080;
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Simple animation for the 404 text */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .error-code {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Path Not Found</h1>
+        
+        <p>It seems the page you are looking for has moved or does not exist. Let us help you find your way back.</p>
+        
+        <span class="motto">"Build each other up" — 1 Thess 5:11</span>
+
+        <a href="https://indiabwu.org/" class="btn">Return to Home</a>
+
+        <div class="footer-text">
+            © <span id="year"></span> India Baptist Women's Union. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        // Automatically update the year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Optional: Log the broken URL to console (or you could send this to an analytics service)
+        console.log("Broken link accessed: " + window.location.href);
+    </script>
+</body>
+</html>
